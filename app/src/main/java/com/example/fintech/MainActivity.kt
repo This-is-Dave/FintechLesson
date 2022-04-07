@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.fintech.home.HomeActivity
 import com.example.fintech.home.HomeFragment
 import com.example.fintech.profile.ProfileFragment
 import com.example.fintech.setting.SettingFragment

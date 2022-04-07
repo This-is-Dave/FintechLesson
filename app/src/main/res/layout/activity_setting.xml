@@ -1,19 +1,312 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingActivity">
+    android:orientation="vertical"
+    tools:context=".setting.SettingActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Setting Activity"
+        android:text="Setting Profile"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/account"
+                android:text="  Nama Lengkap"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/namaLengkap"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bgedit"
+                android:hint="masukkan nama"
+                android:paddingStart="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/account"
+                android:text="  NIM"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/nim"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bgedit"
+                android:hint="masukkan NIM"
+                android:paddingStart="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/account"
+                android:text="  Email"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bgedit"
+                android:hint="masukkan email"
+                android:paddingStart="20dp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/account"
+                android:text="  Nomor Telepon"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <EditText
+                android:id="@+id/noHp"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bgedit"
+                android:hint="masukkan nomor"
+                android:paddingStart="20dp"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/account"
+                android:text="  Password"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:passwordToggleEnabled="true" >
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bgedit"
+                android:hint="masukkan password"
+                android:inputType="textPassword"
+                android:paddingStart="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="20dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/account"
+                android:text="  Jenis Kelamin"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <RadioGroup
+                android:id="@+id/radioGrup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp">
+                <RadioButton
+                    android:id="@+id/laki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Laki-Laki"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+                <RadioButton
+                    android:id="@+id/perempuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=" Perempuan"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/account"
+                android:text="  Program Studi"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bgedit"
+                android:entries="@array/Prodi"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/account"
+                android:text="  Organisasi"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <CheckBox
+                android:id="@+id/amcc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AMCC"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"/>
+            <CheckBox
+                android:id="@+id/himmsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HIMMSI"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"/>
+            <CheckBox
+                android:id="@+id/bem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BEM"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="Status Organisasi"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <ToggleButton
+                android:id="@+id/statusMhs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:textOff="TIDAK AKTIF"
+                android:textOn="AKTIF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="  Sudah Membayar SPP Variabel ?"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <Switch
+                android:id="@+id/sppVariabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="  Seberapa anda menyukai AMIKOM ?"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <SeekBar
+                android:id="@+id/sukaAmikom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="  Beri rating aplikasi kami !"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <RatingBar
+                android:id="@+id/ratingApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:numStars="5"
+                android:stepSize="0.5"/>
+
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:text="SIMPAN"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:textSize="20dp"/>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
